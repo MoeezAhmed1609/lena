@@ -13,8 +13,17 @@ import Auction from "./pages/Auction";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 import ScrollToHashElement from "./components/Layout/ScrollToHash";
+import { ThemeProvider, createTheme } from "@mui/material";
 
 const App = () => {
+  const theme = createTheme({
+    palette: {
+      main: "#0844a4",
+      dark: "#000000",
+      light: "#ffffff",
+    },
+  });
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -22,12 +31,14 @@ const App = () => {
     <Router>
       <ScrollToHashElement />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mint" element={<Mint />} />
-        <Route path="/ifo" element={<IFO />} />
-        <Route path="/auction" element={<Auction />} />
-      </Routes>
+      <ThemeProvider theme={theme}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mint" element={<Mint />} />
+          <Route path="/ifo" element={<IFO />} />
+          <Route path="/auction" element={<Auction />} />
+        </Routes>
+      </ThemeProvider>
       <Footer />
     </Router>
   );

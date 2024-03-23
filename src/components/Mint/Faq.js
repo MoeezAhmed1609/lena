@@ -5,10 +5,12 @@ import {
   AccordionSummary,
   Box,
   Typography,
+  useTheme,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Faq = () => {
+  const theme = useTheme();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -49,33 +51,53 @@ const Faq = () => {
     },
   ];
   return (
-    <Box id={"faq"} className="w-full bg-transparent min-h-screen flex flex-col items-center px-10 sm:px-[24%] py-16">
-      <Typography className="poppins mb-8 text-4xl font-semibold capitalize text-white w-full text-center h-fit">
+    <Box
+      id={"faq"}
+      className="w-full bg-transparent min-h-screen flex flex-col items-center px-10 sm:px-[24%] py-16"
+    >
+      <Typography
+        sx={{
+          color: theme.palette.light,
+        }}
+        className="press-start mb-8 text-4xl font-semibold capitalize w-full text-center h-fit"
+      >
         FAQ
       </Typography>
-      <Box className="w-full h-fit py-6 px-2 sm:p-6 rounded-3xl bg-[#b1b1b1]">
+      <Box
+        className="w-full h-fit py-6 px-2 sm:p-6 rounded-3xl"
+        sx={{
+          backgroundColor: theme.palette.dark,
+        }}
+      >
         {questions.map((index, i) => (
           <Accordion
             key={i}
             expanded={expanded === `panel${i}`}
             onChange={handleChange(`panel${i}`)}
-            className={`my-3 rounded-lg shadow-none border-none bg-transparent text-black before:hidden`}
+            className={`my-3 rounded-lg shadow-none border-none bg-transparent before:hidden`}
+            sx={{ color: theme.palette.light }}
           >
             <AccordionSummary
               expandIcon={
-                <ExpandMoreIcon className="bg-transparent rounded-full h-7 w-7 text-black" />
+                <ExpandMoreIcon
+                  sx={{ color: theme.palette.light }}
+                  className="bg-transparent rounded-full h-7 w-7"
+                />
               }
               aria-controls="panel1bh-content"
               id="panel1bh-header"
             >
               <Typography
-                sx={{ width: "100%" }}
-                className="poppins text-sm font-semibold border-b-4 pb-3 border-[#868687]"
+                sx={{ color: theme.palette.light, width: "100%", borderColor: theme.palette.light }}
+                className="poppins text-sm font-semibold border-b-2 pb-3"
               >
                 {index.question}
               </Typography>
             </AccordionSummary>
-            <AccordionDetails className="bg-transparent text-sm poppins text-black py-3 px-5 border-none">
+            <AccordionDetails
+              sx={{ color: theme.palette.light }}
+              className="bg-transparent text-sm poppins py-3 px-5 border-none"
+            >
               {index.answer}
             </AccordionDetails>
           </Accordion>

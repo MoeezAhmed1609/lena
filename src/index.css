@@ -24,6 +24,10 @@ code {
   font-family: "Poppins", sans-serif !important;
 }
 
+.press-start {
+  font-family: "Press Start 2P", system-ui !important;
+}
+
 .header-bg {
   background: rgba(255, 255, 255, 0.05) !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
@@ -40,16 +44,16 @@ code {
 
 .button-border-gradient {
   background: linear-gradient(
-    38deg,
-    #f47c5e 3%,
-    #9056a3 27%,
-    #dc69a8 65%,
-    #fecd8f 98%
+    90deg,
+    #fff 3%,
+    #0844a450 27%,
+    #0844a450 65%,
+    #fff 98%
   ) !important;
 }
 
 .button-text {
-  background: linear-gradient(180deg, #fef075, #8e5aa1 100%);
+  background: linear-gradient(180deg, #0844a497, #fff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -88,7 +92,6 @@ code {
   backdrop-filter: blur(3.2px);
   -webkit-backdrop-filter: blur(3.2px);
 }
-
 
 /* @media screen and (min-width: 480px) {
   body {

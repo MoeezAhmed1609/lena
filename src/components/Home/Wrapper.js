@@ -11,7 +11,7 @@ import tagBG from "../../assets/tag-bg.png";
 import logo from "../../assets/logo-white.png";
 import { Link } from "react-router-dom";
 
-const Wrapper = () => {
+const Wrapper = ({ theme }) => {
   return (
     <Grid
       container
@@ -28,12 +28,23 @@ const Wrapper = () => {
           <Typography className="poppins text-sm uppercase text-white">
             Lena Network
           </Typography>
-          <Box className="flex items-center gap-x-4">
-            <Typography className="poppins text-4xl font-semibold capitalize text-white">
+          <Box className="flex items-center ">
+            <Typography className="press-start text-4xl font-semibold capitalize text-white">
               Candy Fair Launch
             </Typography>
-            <Box className="flex text-xs py-1 px-3 rounded-full gap-x-2 font-semibold items-center uppercase poppins bg-[#353648] text-[#fff4ad]">
-              <Box className="w-2 h-2 rounded-full bg-[#fff4ad]" />
+            <Box
+              className="flex text-xs py-1 px-3 rounded-full gap-x-2 font-semibold items-center uppercase poppins"
+              sx={{
+                backgroundColor: theme.palette.dark,
+                color: theme.palette.light,
+              }}
+            >
+              <Box
+                className="w-2 h-2 rounded-full"
+                sx={{
+                  backgroundColor: theme.palette.main,
+                }}
+              />
               End
             </Box>
           </Box>
@@ -42,10 +53,10 @@ const Wrapper = () => {
           </Typography>
           <Box className="h-28 sm:h-[28%] w-fit bg-transparent flex flex-col justify-between mt-6">
             <Link to="/ifo">
-              <StyledButton title={"Claim IFO Token"} />
+              <StyledButton title={"Claim IFO Token"}  />
             </Link>
             <Link to="/auction">
-              <StyledButton title={"Auction & Airdrop"} />
+              <StyledButton title={"Auction & Airdrop"}  />
             </Link>
           </Box>
         </Box>

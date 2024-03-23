@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import depositBg from "../../assets/depositsbg.png";
 
-const Banner = ({ reverse }) => {
+const Banner = ({ reverse, theme }) => {
   return (
     <Box
       className={`h-fit w-full relative px-16 ${
@@ -25,10 +25,16 @@ const Banner = ({ reverse }) => {
           data-aos="fade-right"
           className="pb-5 sm:pb-0"
         >
-          <Typography className="poppins text-2xl uppercase button-text">
+          <Typography
+            className="poppins text-xl uppercase press-start"
+            sx={{ color: theme.palette.light }}
+          >
             DEPOSITS AND BORROW
           </Typography>
-          <Typography className="poppins text-4xl uppercase text-white font-bold">
+          <Typography
+            className="poppins text-3xl uppercase text-white font-bold press-start"
+            sx={{ color: theme.palette.light }}
+          >
             TOTAL VALUE LOCKED
           </Typography>
         </Grid>

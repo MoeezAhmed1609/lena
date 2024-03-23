@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 
 const CollectionCard = ({ nft }) => {
+  const theme = useTheme()
   const properties = [
     {
       title: "Collection Size",
@@ -22,7 +23,7 @@ const CollectionCard = ({ nft }) => {
   ];
   return (
     <Box className="w-full h-fit rounded-2xl p-3 pb-5 bg-[#1e242d]">
-      <Typography className="poppins text-base mb-3 capitalize button-text text-center">
+      <Typography className="press-start text-[10px] mb-3 capitalize text-center" sx={{color: theme.palette.light}}>
         {nft.name}
       </Typography>
       <img

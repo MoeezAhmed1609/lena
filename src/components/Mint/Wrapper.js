@@ -1,18 +1,35 @@
 import React from "react";
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import StyledButton from "../StyledButton";
 import bg from "../../assets/mint-bg.png";
 
 const Wrapper = () => {
+  const theme = useTheme();
   return (
-    <Grid container className="bg-black w-full h-fit sm:h-screen pt-[20%] sm:pt-0 px-[13%] relative">
-      <Grid item xs={12} sm={6} md={4} className="h-full w-full">
-        <Box className="w-full h-full flex flex-col justify-end gap-y-4">
-          <Typography className="poppins text-4xl font-semibold capitalize text-white">
+    <Grid
+      container
+      className="w-full h-fit sm:h-screen pt-[20%] sm:pt-0 px-[13%] relative"
+      sx={{
+        backgroundColor: theme.palette.main,
+      }}
+    >
+      <Grid item xs={12} sm={6} md={5} className="h-full w-full">
+        <Box className="w-full h-full flex flex-col justify-center mt-12 gap-y-4">
+          <Typography
+            className="press-start text-2xl font-semibold capitalize"
+            sx={{
+              color: theme.palette.light,
+            }}
+          >
             Your premier card for Web3 liquidity.
           </Typography>
 
-          <Typography className="poppins text-base text-[#bababb]">
+          <Typography
+            className="poppins text-base"
+            sx={{
+              color: theme.palette.light,
+            }}
+          >
             Your gateway to LENA network with the perfect blend of membership
             and utility.
           </Typography>
@@ -21,7 +38,7 @@ const Wrapper = () => {
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={12} sm={6} md={8} className="p-2.5 h-full">
+      <Grid item xs={12} sm={6} md={7} className="p-2.5 h-full">
         <Box className="flex justify-center items-center h-full">
           <img src={bg} alt="mint" className="h-48 sm:h-[70%] w-fit" />
         </Box>

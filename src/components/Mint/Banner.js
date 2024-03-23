@@ -1,9 +1,10 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import depositBg from "../../assets/depositsbg.png";
 import StyledButton from "../StyledButton";
 
 const Banner = ({ reverse, id }) => {
+  const theme = useTheme();
   return (
     <Box
       id={id}
@@ -21,7 +22,12 @@ const Banner = ({ reverse, id }) => {
           <img src={depositBg} alt="bg" className="w-full h-fit" />
         </Grid>
         <Grid item xs={12} sm={6} className="pb-5 sm:pb-0">
-          <Typography className="poppins text-2xl uppercase button-text py-2">
+          <Typography
+            className="press-start text-xl uppercase py-2"
+            sx={{
+              color: theme.palette.light,
+            }}
+          >
             LENA PREMIER CARD
           </Typography>
           <Typography className="poppins text-sm text-white py-2">
