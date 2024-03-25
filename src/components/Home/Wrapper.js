@@ -24,13 +24,13 @@ const Wrapper = ({ theme }) => {
         className="h-[70%] w-full"
         data-aos="fade-right"
       >
-        <Box className="w-full h-full p-5 flex flex-col justify-end gap-y-4">
+        <Box className="w-full h-full p-0 sm:p-5 flex flex-col justify-end gap-y-4">
           <Typography className="poppins text-sm uppercase text-white">
-            Lena Network
+            Plebe Gaming
           </Typography>
           <Box className="flex items-center ">
             <Typography className="press-start text-4xl font-semibold capitalize text-white">
-              Candy Fair Launch
+              Next level NFT Gaming
             </Typography>
             <Box
               className="flex text-xs py-1 px-3 rounded-full gap-x-2 font-semibold items-center uppercase poppins"
@@ -49,7 +49,7 @@ const Wrapper = ({ theme }) => {
             </Box>
           </Box>
           <Typography className="poppins text-sm text-white">
-            Participate and Power Up Your Liquidity with $CANDY
+            Participate and Power Up Your Liquidity with $PLEB
           </Typography>
           <Box className="h-28 sm:h-[28%] w-fit bg-transparent flex flex-col justify-between mt-6">
             <Link to="/ifo">

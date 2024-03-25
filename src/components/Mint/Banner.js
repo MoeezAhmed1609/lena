@@ -28,19 +28,19 @@ const Banner = ({ reverse, id }) => {
               color: theme.palette.light,
             }}
           >
-            LENA PREMIER CARD
+            PLEBE PREMIER CARD
           </Typography>
           <Typography className="poppins text-sm text-white py-2">
             The NFT will act as the access pass for test net, and serve as the
-            proof of early network participation. Holders of LENA card will be
-            at the top of the LENA ecosystem as we grow in members, volume, and
+            proof of early network participation. Holders of PLEBE card will be
+            at the top of the PLEBE ecosystem as we grow in members, volume, and
             new innovative products.
           </Typography>
           <Typography className="poppins text-sm text-white py-2">
             Your member pass will exist on the testnet first. As you continue to
-            interact with the LENA Network's contract, your member pass would
+            interact with the PLEBE Network's contract, your member pass would
             level up. Each level will be entitled to different benefits on the
-            LENA Network, including and not limited to token airdrop.
+            PLEBE Network, including and not limited to token airdrop.
           </Typography>
           <Box className="pt-6">
             <StyledButton title={"Read Whitepaper"} />

@@ -5,6 +5,7 @@ import Wrapper from "../components/Home/Wrapper";
 import Collections from "../components/Home/Collections";
 import Banner from "../components/Home/Banner";
 import Roadmap from "../components/Home/Roadmap";
+import Banner1 from "../components/Home/Banner1";
 
 const Home = () => {
   const theme = useTheme();
@@ -17,7 +18,7 @@ const Home = () => {
     >
       <Wrapper theme={theme} />
       <Collections theme={theme} />
-      <Banner reverse={true} theme={theme} />
+      <Banner1 reverse={true} theme={theme} />
       <Banner theme={theme} />
       <Roadmap theme={theme} />
     </Box>

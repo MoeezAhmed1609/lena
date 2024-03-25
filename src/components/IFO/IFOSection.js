@@ -15,7 +15,7 @@ const IFOSection = () => {
               Your Allocation
             </Typography>
             <Typography className="uppercase poppins font-semibold text-5xl text-white text-center">
-              0 $CANDY
+              0 $PLEB
             </Typography>
           </Box>
           <Box className="h-fit w-full flex flex-col gap-y-4 lg:gap-y-0 lg:flex-row justify-between items-center my-5 px-5">
@@ -26,6 +26,22 @@ const IFOSection = () => {
               <Box className="h-fit p-2.5 w-full text-center bg-[#141118] rounded-full bg-opacity-95">
                 <Typography className="text-white text-sm poppins">
                   Redeem to wallet
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+          <Box className="h-fit w-full flex flex-col gap-y-4 lg:gap-y-0 lg:flex-row justify-between items-center my-5 px-5">
+            <Box className="button-border-gradient w-full lg:w-[44%] p-[2.5px] rounded-full h-fit cursor-pointer">
+              <Box className="h-fit p-2.5 w-full text-center bg-[#141118] rounded-full bg-opacity-95">
+                <Typography className="text-white text-sm poppins">
+                  Check In
+                </Typography>
+              </Box>
+            </Box>
+            <Box className="button-border-gradient w-full lg:w-[44%] p-[2.5px] rounded-full h-fit cursor-pointer">
+              <Box className="h-fit p-2.5 w-full text-center bg-[#141118] rounded-full bg-opacity-95">
+                <Typography className="text-white text-sm poppins">
+                  Referrals
                 </Typography>
               </Box>
             </Box>

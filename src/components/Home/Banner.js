@@ -1,21 +1,13 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import depositBg from "../../assets/depositsbg.png";
+import depositBg from "../../assets/banner4.png";
+import StyledButton from "../StyledButton";
 
 const Banner = ({ reverse, theme }) => {
   return (
-    <Box
-      className={`h-fit w-full relative px-16 ${
-        reverse ? "collections-reverse-bg" : "collections-bg"
-      } `}
-    >
-      <Grid
-        container
-        className={`flex items-center ${
-          reverse ? "flex-row-reverse" : "flex-row"
-        }`}
-      >
-        <Grid item xs={12} sm={6} data-aos="fade-left">
+    <Box className={`h-fit w-full relative px-8 sm:px-16 collections-bg`}>
+      <Grid container className={`flex items-center py-6`}>
+        <Grid item xs={12} sm={6} className="pb-6 sm:pb-0" data-aos="fade-left">
           <img src={depositBg} alt="bg" className="w-full h-fit" />
         </Grid>
         <Grid
@@ -26,17 +18,25 @@ const Banner = ({ reverse, theme }) => {
           className="pb-5 sm:pb-0"
         >
           <Typography
-            className="poppins text-xl uppercase press-start"
+            className="text-xl uppercase press-start pb-3"
             sx={{ color: theme.palette.light }}
           >
-            DEPOSITS AND BORROW
+            Stake Plebe
           </Typography>
           <Typography
-            className="poppins text-3xl uppercase text-white font-bold press-start"
+            className="text-3xl uppercase text-white font-bold press-start"
             sx={{ color: theme.palette.light }}
           >
-            TOTAL VALUE LOCKED
+            LIQUIDITY MINING
           </Typography>
+          <Typography
+            className="poppins text-base pt-4 pb-6"
+            sx={{ color: theme.palette.light }}
+          >
+            Plebe stakers earn a instant yield and participate in governance
+            process of the platform such as what NFTs supported etc.
+          </Typography>
+          <StyledButton title={"Coming Soon"} />
         </Grid>
       </Grid>
     </Box>

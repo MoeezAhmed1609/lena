@@ -2,13 +2,11 @@ import React from "react";
 import { Box, Grid, Typography, useTheme } from "@mui/material";
 import CollectionCard from "./CollectionCard";
 
-import nft1 from "../../assets/nft-1.jpg";
-import nft2 from "../../assets/nft-2.jpg";
-import nft3 from "../../assets/nft-3.jpg";
-import nft4 from "../../assets/nft-4.jpg";
-import nft5 from "../../assets/nft-5.jpg";
-import nft6 from "../../assets/nft-6.jpg";
+import nft1 from "../../assets/nf-ape.jpg";
+import nft2 from "../../assets/nft2.avif";
+import nft3 from "../../assets/nft3.avif";
 import depositBg from "../../assets/depositsbg.png";
+import banner2 from "../../assets/banner2.png";
 
 const Collections = () => {
   const theme = useTheme();
@@ -38,7 +36,7 @@ const Collections = () => {
       ratio: "50%",
     },
     {
-      image: nft4,
+      image: nft1,
       name: "Bored Ape Yacht Club",
       size: 9998,
       floorPrice: 25,
@@ -46,7 +44,7 @@ const Collections = () => {
       ratio: "50%",
     },
     {
-      image: nft5,
+      image: nft2,
       name: "Bored Ape Yacht Club",
       size: 9998,
       floorPrice: 25,
@@ -54,7 +52,7 @@ const Collections = () => {
       ratio: "50%",
     },
     {
-      image: nft6,
+      image: nft3,
       name: "Bored Ape Yacht Club",
       size: 9998,
       floorPrice: 25,
@@ -93,35 +91,56 @@ const Collections = () => {
           </Grid>
         ))}
       </Grid>
-      <Grid container className="flex items-center">
+      <Grid container className="flex items-center py-5">
         <Grid item xs={12} sm={6} data-aos="fade-left">
-          <Typography className="poppins text-xl uppercase press-start" sx={{ color: theme.palette.light }}>
+          <Typography
+            className="poppins text-2xl uppercase press-start"
+            sx={{ color: theme.palette.light }}
+          >
             DEPOSITS AND BORROW
           </Typography>
-          <Typography className="poppins text-3xl uppercase press-start font-bold" sx={{ color: theme.palette.light }}>
+          <Typography
+            className="poppins text-4xl uppercase press-start font-bold"
+            sx={{ color: theme.palette.light }}
+          >
             TOTAL VALUE LOCKED
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={6} data-aos="fade-right">
-          <img src={depositBg} alt="bg" className="w-full h-fit" />
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          data-aos="fade-right"
+          className="flex justify-center sm:justify-end sm:pe-5 py-4 sm:py-0"
+        >
+          <img src={depositBg} alt="bg" className="w-[80%] h-fit" />
         </Grid>
       </Grid>
-      <Grid container className="flex items-center">
-        <Grid item xs={12} sm={6} data-aos="fade-left">
-          <img src={depositBg} alt="bg" className="w-full h-fit" />
+      <Grid container className="flex items-center py-5">
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          data-aos="fade-left"
+          className="flex justify-center sm:justify-end sm:pe-5 py-4 sm:py-0 pb-5 sm:pb-0"
+        >
+          <img src={banner2} alt="bg" className="w-[70%] h-fit" />
         </Grid>
         <Grid item xs={12} sm={6} data-aos="fade-right">
           <Typography
-            className="poppins text-xl uppercase press-start"
+            className="text-2xl uppercase press-start"
             sx={{ color: theme.palette.light }}
           >
-            DEPOSITS AND BORROW
+            NFT as Collaterals to Borrow
           </Typography>
           <Typography
-            className="poppins text-3xl uppercase font-bold press-start"
+            className="text-base pt-4 leading-5 poppins"
             sx={{ color: theme.palette.light }}
           >
-            TOTAL VALUE LOCKED
+            Lena is a decentralised peer-to-pool based NFT liquidity protocol.
+            Provide your NFTs through the Lena Protocol to obtain an instant NFT
+            loan and borrow ETH. Simply maintain the collateral ratio and repay
+            back flexibly. Retrieve your NFT back once the loan is payed.
           </Typography>
         </Grid>
       </Grid>

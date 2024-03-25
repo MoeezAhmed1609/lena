@@ -15,7 +15,7 @@ const LaunchBanner = () => {
         <Box className="flex items-center gap-x-4">
           <img src={candy} alt="candy" className="h-12 w-fit" />
           <Typography className="press-start text-xl font-semibold capitalize text-white">
-            Candy Fair Launch
+            PLEBE Gaming
           </Typography>
           <Box
             className="flex text-xs py-1 px-3 rounded-full gap-x-2 font-semibold items-center uppercase poppins"
@@ -38,7 +38,7 @@ const LaunchBanner = () => {
           </Box> */}
         </Box>
         <Typography className="poppins text-sm text-[#cdcccc] mt-4 mb-2">
-          Participate and Power Up Your Liquidity with $CANDY
+          Participate and Power Up Your Liquidity with $PLEB
         </Typography>
         <StyledButton title={"Find Out More"} />
         

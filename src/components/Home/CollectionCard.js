@@ -28,7 +28,7 @@ const CollectionCard = ({ nft }) => {
       </Typography>
       <img
         src={nft.image}
-        className="w-full h-80 rounded-2xl"
+        className="w-full h-fit rounded-2xl"
         alt={nft.title}
       />
       <Box className="flex flex-wrap my-4">

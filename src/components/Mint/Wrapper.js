@@ -30,7 +30,7 @@ const Wrapper = () => {
               color: theme.palette.light,
             }}
           >
-            Your gateway to LENA network with the perfect blend of membership
+            Your gateway to PLEBE network with the perfect blend of membership
             and utility.
           </Typography>
           <Box className="h-28 sm:h-[28%] w-fit bg-transparent flex flex-col justify-between mt-6">
