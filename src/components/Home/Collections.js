@@ -5,6 +5,9 @@ import CollectionCard from "./CollectionCard";
 import nft1 from "../../assets/nf-ape.jpg";
 import nft2 from "../../assets/nft2.avif";
 import nft3 from "../../assets/nft3.avif";
+import nft4 from "../../assets/nft4.avif";
+import nft5 from "../../assets/nft5.avif";
+import nft6 from "../../assets/nft6.png";
 import depositBg from "../../assets/depositsbg.png";
 import banner2 from "../../assets/banner2.png";
 
@@ -21,42 +24,42 @@ const Collections = () => {
     },
     {
       image: nft2,
-      name: "Bored Ape Yacht Club",
-      size: 9998,
-      floorPrice: 25,
-      borrow: 12.5,
+      name: "Meebits",
+      size: 19998,
+      floorPrice: 1.17,
+      borrow: 0.585,
       ratio: "50%",
     },
     {
       image: nft3,
-      name: "Bored Ape Yacht Club",
-      size: 9998,
-      floorPrice: 25,
-      borrow: 12.5,
+      name: "Mutant Ape Yacht Club",
+      size: 19483,
+      floorPrice: 4.37,
+      borrow: 1.7481,
+      ratio: "40%",
+    },
+    {
+      image: nft4,
+      name: "The Sandbox",
+      size: 165280,
+      floorPrice: 0.23,
+      borrow: 0.115,
       ratio: "50%",
     },
     {
-      image: nft1,
-      name: "Bored Ape Yacht Club",
-      size: 9998,
-      floorPrice: 25,
-      borrow: 12.5,
+      image: nft5,
+      name: "CryptoPunks",
+      size: 9994,
+      floorPrice: 59.89,
+      borrow: 29.945,
       ratio: "50%",
     },
     {
-      image: nft2,
-      name: "Bored Ape Yacht Club",
-      size: 9998,
-      floorPrice: 25,
-      borrow: 12.5,
-      ratio: "50%",
-    },
-    {
-      image: nft3,
-      name: "Bored Ape Yacht Club",
-      size: 9998,
-      floorPrice: 25,
-      borrow: 12.5,
+      image: nft6,
+      name: "PLEBE NFT",
+      size: Infinity,
+      floorPrice: 8.75,
+      borrow: 4.375,
       ratio: "50%",
     },
   ];
