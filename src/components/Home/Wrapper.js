@@ -15,7 +15,7 @@ const Wrapper = ({ theme }) => {
   return (
     <Grid
       container
-      className="w-full h-fit py-20 sm:py-0 sm:h-[150vh] px-[9%] pb-[7%]"
+      className="w-full h-fit py-20 mt-0 md:mt-32 lg:mt-0 sm:py-0 sm:h-[120vh] px-5 md:px-[4%] lg:px-[9%] pb-[7%]"
     >
       <Grid
         item
@@ -51,12 +51,12 @@ const Wrapper = ({ theme }) => {
           <Typography className="poppins text-sm text-white">
             Participate and Power Up Your Liquidity with $PLEB
           </Typography>
-          <Box className="h-28 sm:h-[28%] w-fit bg-transparent flex flex-col justify-between mt-6">
+          <Box className="h-fit gap-y-10 w-fit bg-transparent flex flex-col justify-between mt-6">
             <Link to="/ifo">
-              <StyledButton title={"Claim IFO Token"}  />
+              <StyledButton title={"Claim IFO Token"} />
             </Link>
             <Link to="/auction">
-              <StyledButton title={"Auction & Airdrop"}  />
+              <StyledButton title={"Auction & Airdrop"} />
             </Link>
           </Box>
         </Box>
@@ -66,7 +66,7 @@ const Wrapper = ({ theme }) => {
         xs={12}
         sm={6}
         data-aos="fade-left"
-        className="h-[70%] w-full flex items-end justify-center relative"
+        className="h-[70%] w-full flex items-end md:items-center lg:items-end justify-center relative"
       >
         <Box className="h-[80%] w-fit nft-animation relative">
           <img className="h-full w-fit" alt={"nft"} src={nft} />

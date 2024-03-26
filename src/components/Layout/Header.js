@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Box, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Button, Typography } from "@mui/material";
 import logo from "../../assets/logo.png";
 import MobileDrawer from "./MobileDrawer";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [active, setActive] = useState(0);
+  const { pathname } = useLocation();
+
   const pages = [
     { name: "Home", link: "/" },
     { name: "Mint", link: "/mint" },
@@ -23,19 +25,25 @@ const Header = () => {
         alt="logo"
         className="w-fit h-10 static sm:absolute ms-4 sm:ms-0 sm:left-5"
       />
-      <Box className="justify-center gap-x-12 hidden sm:flex">
-        {pages.map((page, i) => (
-          <Link className="text-white no-underline" to={page.link}>
-            <Typography
-              key={i}
-              className={`text-base hover:border-b-2 border-white hover:-mb-1 text-white roboto ${
-                active === i && "border-b-2 -mb-1"
-              }`}
-            >
-              {page.name}
-            </Typography>
-          </Link>
-        ))}
+      <Box className={`${pathname === "/ifo" ? "hidden" : "flex"}`}>
+        <Box className={`justify-center gap-x-12 hidden sm:flex `}>
+          {pages.map((page, i) => (
+            <Link key={i} className="text-white no-underline" to={page.link}>
+              <Typography
+                className={`text-base hover:border-b-2 border-white hover:-mb-1 text-white roboto ${
+                  active === i && "border-b-2 -mb-1"
+                }`}
+              >
+                {page.name}
+              </Typography>
+            </Link>
+          ))}
+        </Box>
+      </Box>
+      <Box className="w-full h-fit flex justify-end items-center">
+        <Button className="bg-[#47a1ff] text-white rounded-full py-2 px-4 capitalize poppins ">
+          Connect Wallet
+        </Button>
       </Box>
     </Box>
   );
