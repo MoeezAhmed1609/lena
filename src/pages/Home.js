@@ -11,16 +11,16 @@ const Home = () => {
   const theme = useTheme();
   return (
     <Box
-      className="w-full min-h-screen overflow-x-hidden"
+      className="w-full min-h-screen overflow-x-hidden flex flex-col items-center"
       sx={{
         backgroundColor: theme.palette.main,
       }}
     >
-      <Wrapper theme={theme} />
-      <Collections theme={theme} />
-      <Banner1 reverse={true} theme={theme} />
-      <Banner theme={theme} />
-      <Roadmap theme={theme} />
+        <Wrapper theme={theme} />
+        <Collections theme={theme} />
+        <Banner1 reverse={true} theme={theme} />
+        <Banner theme={theme} />
+        <Roadmap theme={theme} />
     </Box>
   );
 };

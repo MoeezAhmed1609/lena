@@ -18,32 +18,42 @@ const Header = () => {
     { name: "Docs", link: "/docs" },
   ];
   return (
-    <Box className="w-full header-bg h-16 fixed z-50 flex items-center sm:justify-center px-6">
-      <MobileDrawer pages={pages} />
-      <img
-        src={logo}
-        alt="logo"
-        className="w-fit h-10 static sm:absolute ms-4 sm:ms-0 sm:left-5"
-      />
-      <Box className={`${pathname === "/ifo" ? "hidden" : "flex"}`}>
-        <Box className={`justify-center gap-x-12 hidden sm:flex `}>
-          {pages.map((page, i) => (
-            <Link key={i} className="text-white no-underline" to={page.link}>
-              <Typography
-                className={`text-base hover:border-b-2 border-white hover:-mb-1 text-white roboto ${
-                  active === i && "border-b-2 -mb-1"
-                }`}
-              >
-                {page.name}
-              </Typography>
-            </Link>
-          ))}
+    <Box className="w-full header-bg fixed z-50 flex justify-center">
+      <Box className="w-full max-w-[1120px] h-16 flex items-center sm:justify-center px-6">
+        <MobileDrawer pages={pages} />
+        <img
+          src={logo}
+          alt="logo"
+          className="w-fit h-10 static sm:absolute ms-4 sm:ms-0 sm:left-5 xl:left-56"
+        />
+        <Box
+          className={`${
+            pathname === "/ifo" ? "hidden" : "flex"
+          } justify-center w-full`}
+        >
+          <Box className={`justify-center gap-x-12 hidden sm:flex `}>
+            {pages.map((page, i) => (
+              <Link key={i} className="text-white no-underline" to={page.link}>
+                <Typography
+                  className={`text-base hover:border-b-2 border-white hover:-mb-1 text-white roboto ${
+                    active === i && "border-b-2 -mb-1"
+                  }`}
+                >
+                  {page.name}
+                </Typography>
+              </Link>
+            ))}
+          </Box>
         </Box>
-      </Box>
-      <Box className="w-full h-fit flex justify-end items-center">
-        <Button className="bg-[#47a1ff] text-white rounded-full py-2 px-4 capitalize poppins ">
-          Connect Wallet
-        </Button>
+        <Box
+          className={`${
+            pathname !== "/ifo" ? "hidden" : "flex"
+          } w-full h-fit flex justify-end items-center`}
+        >
+          <Button className="bg-[#47a1ff] text-white rounded-full py-2 px-4 capitalize poppins ">
+            Connect Wallet
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

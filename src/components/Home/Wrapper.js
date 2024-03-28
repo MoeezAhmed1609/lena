@@ -15,7 +15,7 @@ const Wrapper = ({ theme }) => {
   return (
     <Grid
       container
-      className="w-full h-fit py-20 mt-0 md:mt-32 lg:mt-0 sm:py-0 sm:h-[120vh] px-5 md:px-[4%] lg:px-[9%] pb-[7%]"
+      className="w-full max-w-[1120px] h-fit pt-28 mt-0 md:mt-32 lg:mt-16 sm:py-0 sm:h-[120vh] xl:h-[70vh] px-5 md:px-[4%] lg:px-[9%] xl:px-0 pb-[7%]"
     >
       <Grid
         item
@@ -68,8 +68,8 @@ const Wrapper = ({ theme }) => {
         data-aos="fade-left"
         className="h-[70%] w-full flex items-end md:items-center lg:items-end justify-center relative"
       >
-        <Box className="h-[80%] w-fit nft-animation relative">
-          <img className="h-full w-fit" alt={"nft"} src={nft} />
+        <Box className="h-[80%] max-h-[450px] w-fit nft-animation relative">
+          <img className="h-full w-fit" alt={"nft"} src={nft} />ZXC 
           <img
             className="absolute bottom-0 w-[105%] h-fit"
             src={shadow}

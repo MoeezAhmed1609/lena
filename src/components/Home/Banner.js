@@ -3,10 +3,10 @@ import { Box, Grid, Typography } from "@mui/material";
 import depositBg from "../../assets/banner4.png";
 import StyledButton from "../StyledButton";
 
-const Banner = ({ reverse, theme }) => {
+const Banner = ({ theme }) => {
   return (
-    <Box className={`h-fit w-full relative px-8 sm:px-16 collections-bg`}>
-      <Grid container className={`flex items-center py-6`}>
+    <Box className={`h-fit flex flex-col items-center w-full relative px-8 sm:px-16 collections-bg`}>
+      <Grid container className={`flex items-center py-6 max-w-[1120px]`}>
         <Grid item xs={12} sm={6} className="pb-6 sm:pb-0" data-aos="fade-left">
           <img src={depositBg} alt="bg" className="w-full h-fit" />
         </Grid>

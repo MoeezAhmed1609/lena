@@ -17,6 +17,10 @@ const Roadmap = () => {
       left: "2vw",
       right: undefined,
       bottom: undefined,
+      xl_top: "12vh",
+      xl_left: "0vw",
+      xl_right: undefined,
+      xl_bottom: undefined,
     },
     {
       keys: [
@@ -29,6 +33,10 @@ const Roadmap = () => {
       left: undefined,
       right: "2vw",
       bottom: undefined,
+      xl_top: "32vh",
+      xl_left: undefined,
+      xl_right: "0vw",
+      xl_bottom: undefined,
     },
     {
       keys: [
@@ -41,6 +49,10 @@ const Roadmap = () => {
       left: "2vw",
       right: undefined,
       bottom: undefined,
+      xl_top: "52vh",
+      xl_left: "0vw",
+      xl_right: undefined,
+      xl_bottom: undefined,
     },
 
     {
@@ -53,38 +65,59 @@ const Roadmap = () => {
       left: undefined,
       right: "2vw",
       bottom: undefined,
+      xl_top: "72vh",
+      xl_left: undefined,
+      xl_right: "0vw",
+      xl_bottom: undefined,
     },
   ];
   return (
     <>
-      <Box
-        className="w-full h-[170vh] relative bg-black p-14 hidden sm:flex justify-center items-center"
-        id="roadmap"
-      >
-        <img src={road} alt="roadmap" className="h-full w-fit" />
-        {maps.map((map, i) => (
-          <Box
-            className="absolute w-[350px] flex justify-start p-2.5 sm:justify-end"
-            sx={{
-              top: map.top,
-              bottom: map.bottom,
-              left: map.left,
-              right: map.right,
-            }}
-            key={i}
-          >
-            <ul>
-              {map.keys.map((key, index) => (
-                <li
-                  key={index}
-                  className="text-xs sm:text-sm text-white poppins"
-                >
-                  • {key}
-                </li>
-              ))}
-            </ul>
-          </Box>
-        ))}
+      <Box className="w-full  bg-black hidden sm:flex justify-center items-center">
+        <Box
+          className="w-full h-[170vh] xl:h-screen max-w-[1120px] relative p-14 flex justify-center items-center"
+          id="roadmap"
+        >
+          <img src={road} alt="roadmap" className="h-full w-fit" />
+          {maps.map((map, i) => (
+            <Box
+              className="absolute w-[350px] flex justify-start p-2.5 sm:justify-end"
+              sx={{
+                top: { xl: map?.xl_top, lg: map.top, md: map.top, sm: map.top },
+                bottom: {
+                  xl: map?.xl_bottom,
+                  lg: map.bottom,
+                  md: map.bottom,
+                  sm: map.bottom,
+                },
+                left: {
+                  xl: map?.xl_left,
+                  lg: map.left,
+                  md: map.left,
+                  sm: map.left,
+                },
+                right: {
+                  xl: map?.xl_right,
+                  lg: map.right,
+                  md: map.right,
+                  sm: map.right,
+                },
+              }}
+              key={i}
+            >
+              <ul>
+                {map.keys.map((key, index) => (
+                  <li
+                    key={index}
+                    className="text-xs sm:text-sm text-white poppins"
+                  >
+                    • {key}
+                  </li>
+                ))}
+              </ul>
+            </Box>
+          ))}
+        </Box>
       </Box>
       <Box
         className="w-full h-fit relative bg-black py-10 px-3 flex sm:hidden justify-evenly items-center"

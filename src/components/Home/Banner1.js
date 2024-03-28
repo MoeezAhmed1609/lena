@@ -6,11 +6,11 @@ import StyledButton from "../StyledButton";
 const Banner1 = ({ reverse, theme }) => {
   return (
     <Box
-      className={`h-fit w-full relative px-8 sm:px-16 ${
+      className={`h-fit flex flex-col items-center w-full relative px-8 sm:px-16 ${
         reverse ? "collections-reverse-bg" : "collections-bg"
       } `}
     >
-      <Grid container className={`flex items-center py-8`}>
+      <Grid container className={`flex items-center py-8 max-w-[1120px]`}>
         <Grid
           item
           xs={12}

@@ -39,23 +39,30 @@ const Footer = () => {
     },
   ];
   return (
-    <Grid container className="w-full h-fit sm:h-72 bg-[#0e131b] py-14 px-10 sm:p-20">
-      <Grid item xs={12} sm={6} md={8} className="pb-8 sm:pb-0">
-        <img src={logo} alt="logo" className="h-12 w-fit" />
-        <Typography className="text-white roboto w-full sm:w-1/2 mt-6">
-          Your one-stop shop for securing loans with NFTs & earning yields
-          instantly
-        </Typography>
+    <Box className="bg-[#0e131b] w-full flex justify-center">
+      <Grid
+        container
+        className="w-full max-w-[1120px] h-fit sm:h-72  py-14 px-10 sm:p-20"
+      >
+        <Grid item xs={12} sm={6} md={8} className="pb-8 sm:pb-0">
+          <img src={logo} alt="logo" className="h-12 w-fit" />
+          <Typography className="text-white roboto w-full sm:w-1/2 mt-6">
+            Your one-stop shop for securing loans with NFTs & earning yields
+            instantly
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} className="flex flex-wrap gap-y-3">
+          {links.map((link, i) => (
+            <Box key={i} className="flex items-center gap-x-2 w-1/2">
+              <span className="text-white text-2xl">{link.icon}</span>
+              <Typography className="text-white roboto">
+                {link.title}
+              </Typography>
+            </Box>
+          ))}
+        </Grid>
       </Grid>
-      <Grid item xs={12} sm={6} md={4} className="flex flex-wrap gap-y-3">
-        {links.map((link, i) => (
-          <Box key={i} className="flex items-center gap-x-2 w-1/2">
-            <span className="text-white text-2xl">{link.icon}</span>
-            <Typography className="text-white roboto">{link.title}</Typography>
-          </Box>
-        ))}
-      </Grid>
-    </Grid>
+    </Box>
   );
 };
 
