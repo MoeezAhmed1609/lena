@@ -15,7 +15,7 @@ const Wrapper = ({ theme }) => {
   return (
     <Grid
       container
-      className="w-full max-w-[1120px] h-fit pt-28 mt-0 md:mt-32 lg:mt-16 sm:py-0 sm:h-[120vh] xl:h-[70vh] px-5 md:px-[4%] lg:px-[9%] xl:px-0 pb-[7%]"
+      className="w-full max-w-[1120px] h-fit pt-28 mt-0 md:mt-32 lg:mt-16 sm:py-0 sm:h-[120vh] 2xl:h-[70vh] px-5 md:px-[4%] lg:px-[9%] 2xl:px-0 pb-[7%]"
     >
       <Grid
         item

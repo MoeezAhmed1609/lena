@@ -73,9 +73,9 @@ const Roadmap = () => {
   ];
   return (
     <>
-      <Box className="w-full  bg-black hidden sm:flex justify-center items-center">
+      <Box className="w-full bg-black hidden sm:flex justify-center items-center">
         <Box
-          className="w-full h-[170vh] xl:h-screen max-w-[1120px] relative p-14 flex justify-center items-center"
+          className="w-full h-[170vh] 2xl:h-screen max-w-[1120px] relative p-14 flex justify-center items-center"
           id="roadmap"
         >
           <img src={road} alt="roadmap" className="h-full w-fit" />
