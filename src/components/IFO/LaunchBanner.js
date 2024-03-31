@@ -41,12 +41,28 @@ const LaunchBanner = () => {
           Participate and Power Up Your Liquidity with $PLEB
         </Typography>
         <StyledButton title={"Find Out More"} />
-        
       </Box>
       <Box className="w-full sm:w-1/2 h-full mt-8 sm:mt-0 flex justify-center items-center">
-        <Typography className="text-xl press-start text-center font-semibold capitalize text-white">
+        <Box className="w-full h-fit">
+          <Typography className="text-base text-left poppins pb-2.5 font-semibold uppercase text-white">
+            Time Left
+          </Typography>
+          <Box className="flex items-center flex-wrap gap-x-3">
+            {["Days", "HRS", "MINS", "SECS"].map((elem) => (
+              <>
+                <Box className="h-10 w-10 rounded-lg bg-[#47a1ff] flex items-center justify-center text-white poppins text-xl">
+                  0
+                </Box>
+                <Typography className="text-base poppins text-center font-semibold uppercase text-white">
+                  {elem}
+                </Typography>
+              </>
+            ))}
+          </Box>
+        </Box>
+        {/* <Typography className="text-xl press-start text-center font-semibold capitalize text-white">
           Fair Ended
-        </Typography>
+        </Typography> */}
       </Box>
     </Box>
   );

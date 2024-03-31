@@ -19,7 +19,7 @@ const Header = () => {
   ];
   return (
     <Box className="w-full header-bg fixed z-50 flex justify-center">
-      <Box className="w-full max-w-[1120px] h-16 flex items-center sm:justify-center px-6">
+      <Box className="w-full 2xl:max-w-[1120px] h-16 flex items-center sm:justify-center px-6">
         <MobileDrawer pages={pages} />
         <img
           src={logo}
@@ -50,9 +50,15 @@ const Header = () => {
             pathname !== "/ifo" ? "hidden" : "flex"
           } w-full h-fit flex justify-end items-center`}
         >
-          <Button className="bg-[#47a1ff] text-white rounded-full py-2 px-4 capitalize poppins ">
+          <Box className="rounded-full border border-[#cdcccc] px-2 py-1 flex items-center gap-x-1">
+            <Box className="bg-[#85e2ef] rounded-full w-3 h-3" />
+            <Typography className="text-white poppins text-sm">
+              de322dbc...a6461ec
+            </Typography>
+          </Box>
+          {/* <Button className="bg-[#47a1ff] text-white rounded-full py-2 px-4 capitalize poppins ">
             Connect Wallet
-          </Button>
+          </Button> */}
         </Box>
       </Box>
     </Box>
