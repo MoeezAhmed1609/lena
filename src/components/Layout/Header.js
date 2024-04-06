@@ -19,7 +19,7 @@ const Header = () => {
   ];
   return (
     <Box className="w-full header-bg fixed z-50 flex justify-center">
-      <Box className="w-full 2xl:max-w-[1120px] h-16 flex items-center sm:justify-center px-6">
+      <Box className="w-full 2xl:max-w-[1120px] h-16 flex items-center sm:justify-center px-2.5 sm:px-6">
         <MobileDrawer pages={pages} />
         <img
           src={logo}
@@ -52,7 +52,7 @@ const Header = () => {
         >
           <Box className="rounded-full border border-[#cdcccc] px-2 py-1 flex items-center gap-x-1">
             <Box className="bg-[#85e2ef] rounded-full w-3 h-3" />
-            <Typography className="text-white poppins text-sm">
+            <Typography className="text-white poppins text-xs sm:text-sm">
               de322dbc...a6461ec
             </Typography>
           </Box>
