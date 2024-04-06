@@ -24,7 +24,7 @@ const Header = () => {
         <img
           src={logo}
           alt="logo"
-          className="w-fit h-10 static sm:absolute ms-4 sm:ms-0 sm:left-5 2xl:left-56"
+          className="w-fit h-10 ms-4 sm:ms-0 "
         />
         <Box
           className={`${

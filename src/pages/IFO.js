@@ -9,13 +9,13 @@ const IFO = () => {
   const theme = useTheme();
   return (
     <Box
-      className="w-full h-fit p-5 pt-28"
+      className="w-full h-fit p-5 pt-28 flex justify-center"
       sx={{
         backgroundColor: theme.palette.main,
       }}
     >
       <Box
-        className="w-full h-fit z-10"
+        className="w-full 2xl:max-w-[1120px] h-fit z-10"
       >
         <LaunchBanner />
         <IFOSection />
