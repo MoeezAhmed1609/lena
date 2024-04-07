@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Drawer, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const MobileDrawer = ({ pages }) => {
   const [open, setOpen] = useState(false);
@@ -23,9 +24,11 @@ const MobileDrawer = ({ pages }) => {
         >
           <img src={logo} alt="logo" className="w-fit h-14 " />
           {pages.map((page, i) => (
-            <Typography key={i} className={`text-lg text-black roboto `}>
-              {page}
-            </Typography>
+            <Link to={page.link} key={i}>
+              <Typography key={i} className={`text-lg text-black roboto `}>
+                {page.name}
+              </Typography>
+            </Link>
           ))}
         </Box>
       </Drawer>

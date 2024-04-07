@@ -69,7 +69,7 @@ const Wrapper = ({ theme }) => {
         className="h-[70%] w-full flex items-end md:items-center lg:items-end justify-center relative"
       >
         <Box className="h-[80%] max-h-[450px] w-fit nft-animation relative">
-          <img className="h-full w-fit" alt={"nft"} src={nft} />ZXC 
+          <img className="h-full w-fit" alt={"nft"} src={nft} />
           <img
             className="absolute bottom-0 w-[105%] h-fit"
             src={shadow}
